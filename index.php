@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <title>Document</title>
+    <title>Full Stack Todo App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <script src="/app.js"></script>
+    <main>
+        <div class="container">
+            <h1>Test</h1>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/2d29da14c6.js" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
 </body>
 </html>

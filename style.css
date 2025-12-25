@@ -13,3 +13,48 @@ body {
   max-width: 1440px;
   margin: auto;
 }
+
+main{
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.todo-tracker{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 500px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+h2{
+  font-size: 36px;
+}
+
+.completed-subheading{
+  text-align: left;
+  padding-top: 5px;
+  font-style: italic;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.task-counter{
+  background-color: aquamarine;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.spacer{
+  padding: 0 5px;
+}

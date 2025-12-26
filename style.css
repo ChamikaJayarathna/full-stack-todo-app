@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: 90%;
   max-width: 1440px;
   margin: auto;
 }
@@ -140,4 +140,43 @@ h2 {
   border: none;
   color: white;
   border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    margin-top: 1rem;
+  }
+
+  .todo-tracker {
+    column-gap: 1rem;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .completed-subheading {
+    text-align: center;
+  }
+
+  .task-input {
+    width: 100%;
+  }
+
+  .task-item {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+
+  .task-counter {
+    font-size: 30px;
+  }
+
+  .spacer {
+    padding: 0 3px;
+  }
 }

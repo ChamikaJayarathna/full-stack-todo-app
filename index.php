@@ -24,11 +24,29 @@
         </div>
       </div>
       <form action="" class="task-form">
-        <input type="text" class="task-input" placeholder="Your next task is..." required/>
+        <input
+          type="text"
+          class="task-input"
+          placeholder="Your next task is..."
+          required
+        />
         <button type="submit" class="submit-btn">
           <i class="fa-solid fa-plus fa-2xl"></i>
         </button>
       </form>
+      <ul class="task-list">
+        <li class="task-item">
+          <div class="li-text">Task Out Trash</div>
+          <div class="task-icons">
+            <button class="icon-btn">
+              <i class="fa-solid fa-circle-check fa-2xl"></i>
+            </button>
+            <button class="icon-btn">
+              <i class="fa-solid fa-trash fa-2xl"></i>
+            </button>
+          </div>
+        </li>
+      </ul>
     </main>
     <script
       src="https://kit.fontawesome.com/2d29da14c6.js"

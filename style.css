@@ -58,3 +58,30 @@ h2{
 .spacer{
   padding: 0 5px;
 }
+
+.task-form{
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.task-input{
+  width: 350px;
+  height: 45px;
+  padding-left: 8px;
+  outline: none;
+  border-radius: 30px;
+  border: 1px solid #333;
+  font-size: 18px;
+}
+
+.submit-btn{
+  height: 45px;
+  width: 45px;
+  border: none;
+  border-radius: 50%;
+  background-color: aquamarine;
+  cursor: pointer;
+}

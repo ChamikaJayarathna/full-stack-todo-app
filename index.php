@@ -20,11 +20,15 @@
             <h2>Task Completed</h2>
             <p class="completed-subheading">Keep it up</p>
           </div>
-          <div class="task-counter">
-            1 <span class="spacer">/</span> 3
-          </div>
+          <div class="task-counter">1 <span class="spacer">/</span> 3</div>
         </div>
       </div>
+      <form action="" class="task-form">
+        <input type="text" class="task-input" placeholder="Your next task is..." required/>
+        <button type="submit" class="submit-btn">
+          <i class="fa-solid fa-plus fa-2xl"></i>
+        </button>
+      </form>
     </main>
     <script
       src="https://kit.fontawesome.com/2d29da14c6.js"

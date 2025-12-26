@@ -128,3 +128,16 @@ h2 {
 .icon-btn .fa-trash {
   color: #b22222;
 }
+
+.clear-all-btn {
+  margin-bottom: 3rem;
+  width: 150px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #b22222;
+  border: none;
+  color: white;
+  border-radius: 8px;
+}

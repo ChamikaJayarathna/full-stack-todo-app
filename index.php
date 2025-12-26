@@ -47,6 +47,7 @@
           </div>
         </li>
       </ul>
+      <button type="button" class="clear-all-btn">Clear All Tasks</button>
     </main>
     <script
       src="https://kit.fontawesome.com/2d29da14c6.js"

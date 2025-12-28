@@ -1,3 +1,4 @@
+<?php require __DIR__ . '/db.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

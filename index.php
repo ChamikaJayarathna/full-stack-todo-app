@@ -1,4 +1,30 @@
-<?php require __DIR__ . '/db.php'; ?>
+<?php 
+require __DIR__ . '/db.php'; 
+
+// Run a query to get all tasks from the database (newest first)
+$task_result_set = mysqli_query(
+  $mysqli,
+  "SELECT id, title, is_done FROM tasks ORDER BY id DESC"
+);
+
+// Store all rows of data in a php array in later use
+$task_rows = [];
+while($task_row = mysqli_fetch_assoc($task_result_set)){
+  //convert is_done to integer (0 or 1 instance of "0" or "1")
+  $task_row['is_done'] = (int)$task_row['is_done']; // casting
+  $task_rows[] = $task_row;
+}
+
+// Count totals for the todo tracker
+$total_task_count = count($task_rows);
+$completed_task_count = 0;
+foreach($task_rows as $task){
+  if($task['is_done'] === 1){
+    $completed_task_count++;
+  }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

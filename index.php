@@ -47,7 +47,9 @@ foreach($task_rows as $task){
             <h2>Task Completed</h2>
             <p class="completed-subheading">Keep it up</p>
           </div>
-          <div class="task-counter">1 <span class="spacer">/</span> 3</div>
+          <div class="task-counter">
+            <?php echo $completed_task_count; ?> <span class="spacer">/</span> <?php echo $total_task_count; ?>
+          </div>
         </div>
         <form action="" class="task-form">
           <input

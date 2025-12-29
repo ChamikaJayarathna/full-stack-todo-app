@@ -51,9 +51,10 @@ foreach($task_rows as $task){
             <?php echo $completed_task_count; ?> <span class="spacer">/</span> <?php echo $total_task_count; ?>
           </div>
         </div>
-        <form action="add.php" class="task-form">
+        <form action="add.php" method="POST" class="task-form">
           <input
             type="text"
+            name="task_title"
             class="task-input"
             placeholder="Your next task is..."
             required

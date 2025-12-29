@@ -51,7 +51,7 @@ foreach($task_rows as $task){
             <?php echo $completed_task_count; ?> <span class="spacer">/</span> <?php echo $total_task_count; ?>
           </div>
         </div>
-        <form action="" class="task-form">
+        <form action="add.php" class="task-form">
           <input
             type="text"
             class="task-input"

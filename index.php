@@ -48,7 +48,9 @@ foreach($task_rows as $task){
             <p class="completed-subheading">Keep it up</p>
           </div>
           <div class="task-counter">
-            <?php echo $completed_task_count; ?> <span class="spacer">/</span> <?php echo $total_task_count; ?>
+            <?php echo $completed_task_count; ?>
+            <span class="spacer">/</span>
+            <?php echo $total_task_count; ?>
           </div>
         </div>
         <form action="add.php" method="POST" class="task-form">
@@ -64,17 +66,47 @@ foreach($task_rows as $task){
           </button>
         </form>
         <ul class="task-list">
+          <!-- Check if any tasks has been created -->
+          <?php if(empty($task_rows)): ?>
+          <!-- If no tasks, shore them a message -->
           <li class="task-item">
-            <div class="li-text">Task Out Trash</div>
+            <div class="li-text">Add a task get started...</div>
+          </li>
+          <?php else: ?>
+          <?php foreach($task_rows as $task): ?>
+          <li class="task-item">
+            <!-- Add done class if check mark has been clicked -->
+            <div class="li-text <?php echo $task['is_done'] ? 'done' : '' ?>">
+              <?php echo $task['title']; ?>
+            </div>
+            <!-- Add Logic for check button to cross out completed tasks -->
             <div class="task-icons">
-              <button class="icon-btn">
-                <i class="fa-solid fa-circle-check fa-2xl"></i>
-              </button>
-              <button class="icon-btn">
-                <i class="fa-solid fa-trash fa-2xl"></i>
-              </button>
+              <!-- Toggle check button -->
+              <form action="toggle.php" method="POST" class="inline-form">
+                <input
+                  type="hidden"
+                  name="id"
+                  value="<?php echo $task['id']; ?>"
+                />
+                <button class="icon-btn" type="submit" title="Task Completed">
+                  <i class="fa-solid fa-circle-check fa-2xl"></i>
+                </button>
+              </form>
+              <!-- Delete Button -->
+              <form action="delete.php" method="POST" class="inline-form">
+                <input
+                  type="hidden"
+                  name="id"
+                  value="<?php echo $task['id']; ?>"
+                />
+                <button type="submit" class="icon-btn" title="Delete Task">
+                  <i class="fa-solid fa-trash fa-2xl"></i>
+                </button>
+              </form>
             </div>
           </li>
+          <?php endforeach; ?>
+          <?php endif; ?>
         </ul>
         <button type="button" class="clear-all-btn">Clear All Tasks</button>
       </div>

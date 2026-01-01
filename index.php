@@ -109,7 +109,7 @@ foreach($task_rows as $task){
           <?php endif; ?>
         </ul>
         <form action="clear.php" method="POST">
-          <button type="button" class="clear-all-btn">Clear All Tasks</button>
+          <button type="submit" class="clear-all-btn">Clear All Tasks</button>
         </form>
       </div>
     </main>

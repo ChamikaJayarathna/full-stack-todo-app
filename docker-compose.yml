@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      - DB_HOST=db
+      - DB_USER=user
+      - DB_PASS=password
+      - DB_NAME=full_stack_todo_app
+    depends_on:
+      - db
+    networks:
+      - todo-network
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      - MYSQL_DATABASE=full_stack_todo_app
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=root_password
+    volumes:
+      - db_data:/var/lib/mysql
+      # Initialize database with a schema if needed - for now we assume the app handles it or user manually imports
+      # You can mount a sql file to /docker-entrypoint-initdb.d/ to auto-import
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - todo-network
+
+networks:
+  todo-network:
+    driver: bridge
+
+volumes:
+  db_data:
